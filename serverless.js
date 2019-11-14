@@ -6,9 +6,9 @@ const slsConfig = {
     name: "aws",
     runtime: "nodejs8.10",
     region: config.region,
-    environment: {
-      ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`
-    }
+//    environment: {
+//      ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`
+//    }
   },
   custom: {
     "serverless-offline": {
