@@ -3,8 +3,8 @@
 async function setup() {
   env = "stage"
   const issuerData = await createIssuers(env);
-  console.log("Issuers created: ", issuerData);
-  console.table(issuerData);
+  console.log("\n\n\n\n")
+  console.log(issuerData);
 }
 
 setup();
