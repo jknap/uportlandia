@@ -13,31 +13,35 @@ import { SERVICES } from "../../constants/config";
 class Home extends React.Component {
   render() {
     const { showAppDownload } = this.props;
-    return (<Wrapper extraPadding={showAppDownload}>
-      <Header />
-      <Cards>
-        <Container>
-          {Object.keys(SERVICES).map(sid => <Card key={sid}
-            name={SERVICES[sid].displayName}
-            icon={SERVICES[sid].icon}
-            superText={SERVICES[sid].entity}
-            description={SERVICES[sid].description}
-            shareClaims={SERVICES[sid].requiredClaims}
-            shareServices={SERVICES[sid].requiredServices}
-            receiveClaims={SERVICES[sid].generatedClaims}
-            url={SERVICES[sid].url}
-            colors={theme.colors[sid]} />)}
-        </Container>
-      </Cards>
-      <AppDownload />
-    </Wrapper>)
+    return (
+      <Wrapper extraPadding={showAppDownload}>
+        {/* <Header /> */}
+        <Cards>
+          <Container>
+            {Object.keys(SERVICES).map(sid => (
+              <Card
+                key={sid}
+                name={SERVICES[sid].displayName}
+                icon={SERVICES[sid].icon}
+                superText={SERVICES[sid].entity}
+                description={SERVICES[sid].description}
+                shareClaims={SERVICES[sid].requiredClaims}
+                shareServices={SERVICES[sid].requiredServices}
+                receiveClaims={SERVICES[sid].generatedClaims}
+                url={SERVICES[sid].url}
+                colors={theme.colors[sid]}
+              />
+            ))}
+          </Container>
+        </Cards>
+        <AppDownload />
+      </Wrapper>
+    );
   }
 }
 
 const Wrapper = styled.div`
-  ${props => props.extraPadding
-    ? `padding-bottom: 6rem;`
-    : ""}
+  ${props => (props.extraPadding ? `padding-bottom: 6rem;` : "")}
 `;
 const Cards = styled.div`
   background: ${theme.gradient1};

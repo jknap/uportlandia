@@ -6,9 +6,9 @@ const slsConfig = {
     name: "aws",
     runtime: "nodejs8.10",
     region: config.region,
-//    environment: {
-//      ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`
-//    }
+    environment: {
+      //  ISSUERS: `$\{ssm:${config.ssmParam.issuers}~true}`
+    }
   },
   custom: {
     "serverless-offline": {
@@ -29,18 +29,20 @@ const slsConfig = {
     server: {
       handler: "src/server.handler",
       timeout: 12,
-      events: [{
-        http: {
-          method: "ANY",
-          path: "/{proxy+}",
-          cors: config.cors
+      events: [
+        {
+          http: {
+            method: "ANY",
+            path: "/{proxy+}",
+            cors: config.cors
+          }
         }
-      }]
+      ]
     }
   },
   package: {
-    exclude: [ "./**" ],
-    include: [ "src/server.js" ]
+    exclude: ["./**"],
+    include: ["src/server.js"]
   }
 };
 

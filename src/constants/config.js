@@ -2,12 +2,12 @@ import dayjs from "dayjs";
 
 // Images/Logos
 import logo from "../images/uport-logo.svg";
-import CityIDIcon from "../images/city-logo.png";
+import CityIDIcon from "../images/city_of_lyon.png";
 import DiplomaIcon from "../images/university-logo.png";
 import EmploymentIcon from "../images/company-logo.png";
 import InsuranceIcon from "../images/insurance-logo.png";
-import PharmacyIcon from "../images/pharmacy-logo.png";
-import TransportIcon from "../images/transport-logo.png";
+import PharmacyIcon from "../images/edf.png";
+import TransportIcon from "../images/youth-card.jpg";
 import MuseumIcon from "../images/museum-logo.png";
 import COUNTRIES from "./countries";
 
@@ -26,11 +26,7 @@ export const registration = {
   name: "City ID",
   serviceId: "CITY_ID",
   text: {
-    landingSteps: [
-      "regnLandingStep1",
-      "regnLandingStep2",
-      "regnLandingStep3"
-    ]
+    landingSteps: ["regnLandingStep1", "regnLandingStep2", "regnLandingStep3"]
   },
   form: {
     firstName: {
@@ -82,11 +78,14 @@ export const registration = {
       placeholder: "YYYY-MM-DD",
       type: "date",
       min: "1900-01-01",
-      max: dayjs().add(-13, "year").format("YYYY-MM-DD"),
+      max: dayjs()
+        .add(-13, "year")
+        .format("YYYY-MM-DD"),
       required: true,
       isValid: value => {
         const today = dayjs();
-        if(!/^\d{4}-\d{2}-\d{2}$/.test(value) ||
+        if (
+          !/^\d{4}-\d{2}-\d{2}$/.test(value) ||
           !dayjs(value).isValid() ||
           dayjs(value).year() > today.year() - 13 ||
           dayjs(value).year() < 1900
@@ -112,21 +111,17 @@ export const registration = {
   }
 };
 
-const CITY_ID = { // This should match the Registration Config
+const CITY_ID = {
+  // This should match the Registration Config
   id: "CITY_ID",
-  name: "City ID",
+  name: "Illico Solidaire",
   displayName: "cityIdDisplayName",
   icon: CityIDIcon,
-  entity: "The City of uPortlandia",
+  entity: "City of Lyon",
   description: "cityIdDescription",
   url: "/city",
   claim: "Uportlandia City ID",
-  steps: [
-    "cityIdStep1",
-    "cityIdStep2",
-    "cityIdStep3",
-    "cityIdStep4"
-  ]
+  steps: ["cityIdStep1", "cityIdStep2", "cityIdStep3", "cityIdStep4"]
 };
 
 // All Services
@@ -139,15 +134,8 @@ const DIPLOMA = {
   description: "diplomaDescription",
   url: "/university",
   claim: "Diploma",
-  steps: [
-    "diplomaStep1",
-    "diplomaStep2",
-    "diplomaStep3"
-  ],
-  details: [
-    "diplomaDetail1",
-    "diplomaDetail2"
-  ],
+  steps: ["diplomaStep1", "diplomaStep2", "diplomaStep3"],
+  details: ["diplomaDetail1", "diplomaDetail2"],
   claimData: {
     "School Name": "The University of uPortlandia",
     "Program Name": "French linguistics",
@@ -165,18 +153,11 @@ const COMPANY = {
   description: "employmentDescription",
   url: "/company",
   claim: "Employment",
-  steps: [
-    "employmentStep1",
-    "employmentStep2",
-    "employmentStep3"
-  ],
-  details: [
-    "companyDetail1",
-    "companyDetail2"
-  ],
+  steps: ["employmentStep1", "employmentStep2", "employmentStep3"],
+  details: ["companyDetail1", "companyDetail2"],
   claimData: {
     "Company Name": "Dream Job LLC.",
-    "Salary": "$100,000",
+    Salary: "$100,000",
     "Date of Employment": "01/06/2019"
   }
 };
@@ -190,18 +171,12 @@ const INSURANCE = {
   description: "insuranceDescription",
   url: "/insurance",
   claim: "Insurance",
-  steps: [
-    "insuranceStep1",
-    "insuranceStep2",
-    "insuranceStep3"
-  ],
-  details: [
-    "insuranceDetail1"
-  ],
+  steps: ["insuranceStep1", "insuranceStep2", "insuranceStep3"],
+  details: ["insuranceDetail1"],
   claimData: {
     "Policy Number": "0000",
     "Group Number": "G-01",
-    "Dependencies": "2"
+    Dependencies: "2"
   }
 };
 
@@ -210,18 +185,12 @@ const PHARMACY = {
   name: "Prescription Drug",
   displayName: "pharmacyDisplayName",
   icon: PharmacyIcon,
-  entity: "Your Health Medical Center",
+  entity: "EDF",
   description: "pharmacyDescription",
   url: "/pharmacy",
   claim: "Prescription Drug",
-  steps: [
-    "pharmacyStep1",
-    "pharmacyStep2",
-    "pharmacyStep3"
-  ],
-  details: [
-    "pharmacyDetail1"
-  ],
+  steps: [],
+  details: ["pharmacyDetail1"],
   claimData: {
     "Prescription Drug": "Yes"
   }
@@ -236,16 +205,10 @@ const TRANSPORT = {
   description: "transportDescription",
   url: "/transport",
   claim: "Bus Ticket",
-  steps: [
-    "transportStep1",
-    "transportStep2",
-    "transportStep3"
-  ],
-  details: [
-    "transportDetail1"
-  ],
+  steps: ["transportStep1", "transportStep2", "transportStep3"],
+  details: ["transportDetail1"],
   claimData: {
-    "Monthly Bus Ticket": "June 2019",
+    "Monthly Bus Ticket": "June 2019"
   }
 };
 
@@ -258,14 +221,8 @@ const MUSEUM = {
   description: "museumDescription",
   url: "/museum",
   claim: "Museum Membership",
-  steps: [
-    "museumStep1",
-    "museumStep2",
-    "museumStep3"
-  ],
-  details: [
-    "museumDetail1"
-  ],
+  steps: ["museumStep1", "museumStep2", "museumStep3"],
+  details: ["museumDetail1"],
   claimData: {
     "Annual Membership": "2019"
   }
@@ -295,6 +252,14 @@ const LAST_NAME = {
   displayName: "Last Name",
   issuedBy: [CITY_ID],
   honoredBy: [DIPLOMA, INSURANCE, MUSEUM, TRANSPORT, PHARMACY]
+};
+
+const CONTRACT_NUMBER = {
+  id: "contractNumber",
+  name: "EDF Contract Number",
+  displayName: "EDF Contract Number",
+  issuedBy: [PHARMACY],
+  honoredBy: []
 };
 
 const DATE_OF_BIRTH = {
@@ -384,7 +349,7 @@ const DEPENDENCIES = {
 };
 
 const PRESCRIPTION_DRUG = {
-  name: "Prescription Drug",
+  name: "Proof of Residency",
   displayName: "pharmacyDisplayName",
   issuedBy: [PHARMACY],
   honoredBy: [PHARMACY]
@@ -412,25 +377,47 @@ CITY_ID.requiredClaims = CITY_ID.generatedClaims.map(c => ({
 }));
 DIPLOMA.requiredClaims = [FIRST_NAME, LAST_NAME, DATE_OF_BIRTH];
 DIPLOMA.requiredServices = [CITY_ID];
-DIPLOMA.generatedClaims = [SCHOOL_NAME, PROGRAM_NAME, GRADUATION_YEAR, FINAL_GRADES];
-COMPANY.requiredClaims = [FIRST_NAME, LAST_NAME, SCHOOL_NAME, PROGRAM_NAME, FINAL_GRADES];
+DIPLOMA.generatedClaims = [
+  SCHOOL_NAME,
+  PROGRAM_NAME,
+  GRADUATION_YEAR,
+  FINAL_GRADES
+];
+COMPANY.requiredClaims = [
+  FIRST_NAME,
+  LAST_NAME,
+  SCHOOL_NAME,
+  PROGRAM_NAME,
+  FINAL_GRADES
+];
 COMPANY.requiredServices = [CITY_ID, DIPLOMA];
 COMPANY.generatedClaims = [COMPANY_NAME, SALARY, DATE_OF_EMPLOYMENT];
-INSURANCE.requiredClaims = [FIRST_NAME, LAST_NAME, COMPANY_NAME, DATE_OF_EMPLOYMENT];
+INSURANCE.requiredClaims = [
+  FIRST_NAME,
+  LAST_NAME,
+  COMPANY_NAME,
+  DATE_OF_EMPLOYMENT
+];
 INSURANCE.requiredServices = [CITY_ID, COMPANY];
 INSURANCE.generatedClaims = [POLICY_NUMBER, GROUP_NUMBER, DEPENDENCIES];
-PHARMACY.requiredClaims = [FIRST_NAME, LAST_NAME, POLICY_NUMBER, GRADUATION_YEAR, DEPENDENCIES];
-PHARMACY.requiredServices = [CITY_ID, INSURANCE, DIPLOMA];
+PHARMACY.requiredClaims = [FIRST_NAME, LAST_NAME, CONTRACT_NUMBER];
+PHARMACY.requiredServices = [];
 PHARMACY.generatedClaims = [PRESCRIPTION_DRUG];
-TRANSPORT.requiredClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH, GRADUATION_YEAR];
-TRANSPORT.requiredServices = [CITY_ID, DIPLOMA];
+TRANSPORT.requiredClaims = [FIRST_NAME, LAST_NAME, CONTRACT_NUMBER];
+TRANSPORT.requiredServices = [CITY_ID, PHARMACY];
 TRANSPORT.generatedClaims = [BUS_TICKET];
-MUSEUM.requiredClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH]
+MUSEUM.requiredClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH];
 MUSEUM.requiredServices = [CITY_ID];
 MUSEUM.generatedClaims = [MUSEUM_MEMBERSHIP];
 
+// export const SERVICES = {
+//   CITY_ID, DIPLOMA, COMPANY, INSURANCE, PHARMACY, TRANSPORT, MUSEUM
+// };
+
 export const SERVICES = {
-  CITY_ID, DIPLOMA, COMPANY, INSURANCE, PHARMACY, TRANSPORT, MUSEUM
+  CITY_ID,
+  PHARMACY,
+  TRANSPORT
 };
 
 // Create route config for services
@@ -441,10 +428,12 @@ export const routes = Object.keys(SERVICES).map(serviceId => ({
 
 // Ext Service URLs
 
-const getChasquiUrl = () => process.env.REACT_APP_TARGET_ENV === "prod"
-  ? "https://api.uport.me/chasqui/"
-  : "https://api.uport.space/chasqui/";
+const getChasquiUrl = () =>
+  process.env.REACT_APP_TARGET_ENV === "prod"
+    ? "https://api.uport.me/chasqui/"
+    : "https://api.uport.space/chasqui/";
 
 export const CHASQUI_URL = getChasquiUrl();
 export const SIGNER_URL = getSignerUrl();
-export const SENTRY_DSN = "https://7a87f2dc2e774d5891ec2ea565b40c05@sentry.io/1449781";
+export const SENTRY_DSN =
+  "https://7a87f2dc2e774d5891ec2ea565b40c05@sentry.io/1449781";
