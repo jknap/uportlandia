@@ -49,6 +49,7 @@
   },
   "scripts": {
     "setup": "node node_scripts/setup",
+    "setup:local": "node node_scripts/setup-local",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

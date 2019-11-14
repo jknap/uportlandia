@@ -165,7 +165,7 @@ const DIPLOMA = {
   entity: "SNCF",
   description: "diplomaDescription",
   url: "/sncf",
-  claim: "Diploma------------",
+  claim: "Unemployment discount card",
   steps: ["diplomaStep1", "diplomaStep2", "diplomaStep3"],
   details: [],
   claimData: {

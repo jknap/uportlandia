@@ -121,7 +121,7 @@ export default {
     "Your claims were succesfully shared with",
   "is going to send your new claims to your uPort app": "",
 
-  regnLandingHeading: "Join thousands of fellow uPortlandia citizens!",
+  regnLandingHeading: "Issue a Lyon city ID",
   regnLandingStep1:
     "Get things done without leaving your home. No more standing in lines.",
   regnLandingStep2: "Access services and programs offered by the City",
