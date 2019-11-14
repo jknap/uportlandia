@@ -6,7 +6,7 @@ import CityIDIcon from "../images/city_of_lyon.png";
 import DiplomaIcon from "../images/sncf.png";
 import EmploymentIcon from "../images/company-logo.png";
 import InsuranceIcon from "../images/insurance-logo.png";
-import PharmacyIcon from "../images/edf.png";
+import PharmacyIcon from "../images/edf-logo.svg";
 import TransportIcon from "../images/pole_emploi.png";
 import MuseumIcon from "../images/museum-logo.png";
 import COUNTRIES from "./countries";
