@@ -1,6 +1,6 @@
 ### Running Locally
 
-** Generate Hard-Coded credential IDs**
+**Generate Hard-Coded credential IDs**
 ```
 yarn setup-local
 ```
