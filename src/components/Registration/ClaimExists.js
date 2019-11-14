@@ -15,13 +15,14 @@ const { serviceId } = registration;
 const ClaimExists = () => {
   const { t } = useTranslation();
   const deps = getDependentServices(SERVICES[serviceId].id);
-  return (<Wrapper>
-    <TopHalf>
-      <h2>{t("regnClaimExists")}</h2>
-      <Logo src={SERVICES[serviceId].icon} />
-      <p>{t("regnBenefits")}</p>
-    </TopHalf>
-    <BotHalf>
+  return (
+    <Wrapper>
+      <TopHalf>
+        <h2>{t("regnClaimExists")}</h2>
+        <Logo src={SERVICES[serviceId].icon} />
+        <p>{t("regnBenefits")}</p>
+      </TopHalf>
+      {/* <BotHalf>
       <Grid>
         <Spacer span={2} />
         {deps.length
@@ -48,9 +49,10 @@ const ClaimExists = () => {
         : null}
         <Spacer span={2} />
       </Grid>
-    </BotHalf>
-    <Footer />
-  </Wrapper>)
+    </BotHalf> */}
+      <Footer />
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`

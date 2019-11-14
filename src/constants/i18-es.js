@@ -107,7 +107,7 @@ export default {
   "City ID": "City ID",
   Diploma: "Diploma",
   "Monthly Bus Ticket": "Boleto de Bus Mensual",
-  "Prescription Drug": "Medicamento Recetado",
+  "Proof of Residency": "Medicamento Recetado",
   "Annual Membership": "Membresía Anual",
   "Insurance Coverage": "Cobertura del Seguro",
   "Employment Verification": "Verificación de Empleo",

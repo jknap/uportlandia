@@ -36,11 +36,11 @@ module.exports.ISSUER_PROFILES = [
   },
   {
     id: "TRANSPORT",
-    name: "12-17 Lyon transport card",
+    name: "Pole Emploi",
     url: {
       stage: "https://uportlandia.uport.space/transport",
       prod: "https://uportlandia.uport.me/transport"
     },
-    profileImage: "src/images/transport-logo.png"
+    profileImage: "src/images/pole_emploi.png"
   }
 ];

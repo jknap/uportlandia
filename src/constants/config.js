@@ -7,7 +7,7 @@ import DiplomaIcon from "../images/university-logo.png";
 import EmploymentIcon from "../images/company-logo.png";
 import InsuranceIcon from "../images/insurance-logo.png";
 import PharmacyIcon from "../images/edf.png";
-import TransportIcon from "../images/youth-card.jpg";
+import TransportIcon from "../images/pole_emploi.png";
 import MuseumIcon from "../images/museum-logo.png";
 import COUNTRIES from "./countries";
 
@@ -124,6 +124,38 @@ const CITY_ID = {
   steps: ["cityIdStep1", "cityIdStep2", "cityIdStep3", "cityIdStep4"]
 };
 
+const PHARMACY = {
+  id: "PHARMACY",
+  name: "Proof of Residency",
+  displayName: "pharmacyDisplayName",
+  icon: PharmacyIcon,
+  entity: "EDF",
+  description: "pharmacyDescription",
+  url: "/pharmacy",
+  claim: "Proof of Residency",
+  steps: [],
+  details: ["pharmacyDetail1"],
+  claimData: {
+    "Proof of Residency": "Yes"
+  }
+};
+
+const TRANSPORT = {
+  id: "TRANSPORT",
+  name: "Monthly Bus Ticket",
+  displayName: "transportDisplayName",
+  icon: TransportIcon,
+  entity: "uPortlandia City Transit",
+  description: "transportDescription",
+  url: "/transport",
+  claim: "Bus Ticket",
+  steps: ["transportStep1", "transportStep2", "transportStep3"],
+  details: ["transportDetail1"],
+  claimData: {
+    "Monthly Bus Ticket": "June 2019"
+  }
+};
+
 // All Services
 const DIPLOMA = {
   id: "DIPLOMA",
@@ -177,38 +209,6 @@ const INSURANCE = {
     "Policy Number": "0000",
     "Group Number": "G-01",
     Dependencies: "2"
-  }
-};
-
-const PHARMACY = {
-  id: "PHARMACY",
-  name: "Prescription Drug",
-  displayName: "pharmacyDisplayName",
-  icon: PharmacyIcon,
-  entity: "EDF",
-  description: "pharmacyDescription",
-  url: "/pharmacy",
-  claim: "Prescription Drug",
-  steps: [],
-  details: ["pharmacyDetail1"],
-  claimData: {
-    "Prescription Drug": "Yes"
-  }
-};
-
-const TRANSPORT = {
-  id: "TRANSPORT",
-  name: "Monthly Bus Ticket",
-  displayName: "transportDisplayName",
-  icon: TransportIcon,
-  entity: "uPortlandia City Transit",
-  description: "transportDescription",
-  url: "/transport",
-  claim: "Bus Ticket",
-  steps: ["transportStep1", "transportStep2", "transportStep3"],
-  details: ["transportDetail1"],
-  claimData: {
-    "Monthly Bus Ticket": "June 2019"
   }
 };
 
@@ -375,6 +375,10 @@ CITY_ID.requiredClaims = CITY_ID.generatedClaims.map(c => ({
   ...c,
   issuedBy: [YOURSELF]
 }));
+PHARMACY.requiredServices = [CITY_ID];
+PHARMACY.generatedClaims = [PRESCRIPTION_DRUG];
+TRANSPORT.requiredServices = [CITY_ID];
+TRANSPORT.generatedClaims = [BUS_TICKET];
 DIPLOMA.requiredClaims = [FIRST_NAME, LAST_NAME, DATE_OF_BIRTH];
 DIPLOMA.requiredServices = [CITY_ID];
 DIPLOMA.generatedClaims = [
@@ -400,12 +404,6 @@ INSURANCE.requiredClaims = [
 ];
 INSURANCE.requiredServices = [CITY_ID, COMPANY];
 INSURANCE.generatedClaims = [POLICY_NUMBER, GROUP_NUMBER, DEPENDENCIES];
-PHARMACY.requiredClaims = [FIRST_NAME, LAST_NAME, CONTRACT_NUMBER];
-PHARMACY.requiredServices = [];
-PHARMACY.generatedClaims = [PRESCRIPTION_DRUG];
-TRANSPORT.requiredClaims = [FIRST_NAME, LAST_NAME, CONTRACT_NUMBER];
-TRANSPORT.requiredServices = [CITY_ID, PHARMACY];
-TRANSPORT.generatedClaims = [BUS_TICKET];
 MUSEUM.requiredClaims = [FIRST_NAME, LAST_NAME, ADDRESS, DATE_OF_BIRTH];
 MUSEUM.requiredServices = [CITY_ID];
 MUSEUM.generatedClaims = [MUSEUM_MEMBERSHIP];

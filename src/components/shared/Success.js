@@ -18,23 +18,25 @@ import { SERVICES } from "../../constants/config";
 
 class Success extends React.Component {
   componentDidMount() {
-    if(!this.props.isLoggedIn) {
+    if (!this.props.isLoggedIn) {
       this.props.redirectToServiceHome(this.props.id);
     }
   }
   render() {
     const { id, isLoggedIn, t } = this.props;
-    if(!isLoggedIn)
-      return <Redirect to={SERVICES[id].url} />
+    if (!isLoggedIn) return <Redirect to={SERVICES[id].url} />;
     const deps = getDependentServices(SERVICES[id].id);
-    return (<Wrapper>
-      <TopHalf>
-        <h2>{t("Congratulations!")}</h2>
-        <h3>{t("You received your")} {t(SERVICES[id].displayName)}</h3>
-        <SuccessImage src={SuccessIcon} />
-        <p>{t("Your claims are stored in your uPort app")}</p>
-      </TopHalf>
-      <BotHalf>
+    return (
+      <Wrapper>
+        <TopHalf>
+          <h2>{t("Congratulations!")}</h2>
+          <h3>
+            {t("You received your")} {t(SERVICES[id].displayName)}
+          </h3>
+          <SuccessImage src={SuccessIcon} />
+          <p>{t("Your claims are stored in your uPort app")}</p>
+        </TopHalf>
+        {/* <BotHalf>
         <Grid>
           <Spacer span={1} />
           {deps.length
@@ -63,9 +65,10 @@ class Success extends React.Component {
             <LikeDemo />
           </Col>
         </Grid>
-      </BotHalf>
-      <Footer />
-    </Wrapper>)
+      </BotHalf> */}
+        {/* <Footer /> */}
+      </Wrapper>
+    );
   }
 }
 
@@ -147,4 +150,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(Success));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withTranslation()(Success));
