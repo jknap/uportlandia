@@ -45,7 +45,7 @@ module.exports.ISSUER_PROFILES = [
   },
   {
     id: "DIPLOMA",
-    name: "Pole Emploi",
+    name: "SNCF",
     url: {
       stage: "https://uportlandia.uport.space/university",
       prod: "https://uportlandia.uport.me/university"
