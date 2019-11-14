@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 // Images/Logos
 import logo from "../images/uport-logo.svg";
 import CityIDIcon from "../images/city_of_lyon.png";
-import DiplomaIcon from "../images/university-logo.png";
+import DiplomaIcon from "../images/sncf.png";
 import EmploymentIcon from "../images/company-logo.png";
 import InsuranceIcon from "../images/insurance-logo.png";
 import PharmacyIcon from "../images/edf.png";
@@ -134,7 +134,7 @@ const PHARMACY = {
   url: "/pharmacy",
   claim: "Proof of Residency",
   steps: [],
-  details: ["pharmacyDetail1"],
+  details: [],
   claimData: {
     "Proof of Residency": "Yes"
   }
@@ -142,7 +142,7 @@ const PHARMACY = {
 
 const TRANSPORT = {
   id: "TRANSPORT",
-  name: "Monthly Bus Ticket",
+  name: "Unemployment Card",
   displayName: "transportDisplayName",
   icon: TransportIcon,
   entity: "uPortlandia City Transit",
@@ -150,26 +150,26 @@ const TRANSPORT = {
   url: "/transport",
   claim: "Bus Ticket",
   steps: ["transportStep1", "transportStep2", "transportStep3"],
-  details: ["transportDetail1"],
+  details: [],
   claimData: {
-    "Monthly Bus Ticket": "June 2019"
+    "Unemployment Card": "June 2019"
   }
 };
 
 // All Services
 const DIPLOMA = {
   id: "DIPLOMA",
-  name: "Diploma",
+  name: "SNCF Unemployment Discount Card",
   displayName: "diplomaDisplayName",
   icon: DiplomaIcon,
-  entity: "The University of uPortlandia",
+  entity: "SNCF",
   description: "diplomaDescription",
   url: "/university",
-  claim: "Diploma",
+  claim: "Diploma------------",
   steps: ["diplomaStep1", "diplomaStep2", "diplomaStep3"],
-  details: ["diplomaDetail1", "diplomaDetail2"],
+  details: [],
   claimData: {
-    "School Name": "The University of uPortlandia",
+    "School Name": "SNCF",
     "Program Name": "French linguistics",
     "Graduation Year": "2019",
     "Final Grades": "B+"
@@ -356,7 +356,7 @@ const PRESCRIPTION_DRUG = {
 };
 
 const BUS_TICKET = {
-  name: "Monthly Bus Ticket",
+  name: "Unemployment Card",
   displayName: "transportDisplayName",
   issuedBy: [TRANSPORT],
   honoredBy: [TRANSPORT]
@@ -379,8 +379,7 @@ PHARMACY.requiredServices = [CITY_ID];
 PHARMACY.generatedClaims = [PRESCRIPTION_DRUG];
 TRANSPORT.requiredServices = [CITY_ID];
 TRANSPORT.generatedClaims = [BUS_TICKET];
-DIPLOMA.requiredClaims = [FIRST_NAME, LAST_NAME, DATE_OF_BIRTH];
-DIPLOMA.requiredServices = [CITY_ID];
+DIPLOMA.requiredServices = [CITY_ID, PHARMACY, TRANSPORT];
 DIPLOMA.generatedClaims = [
   SCHOOL_NAME,
   PROGRAM_NAME,
@@ -415,7 +414,8 @@ MUSEUM.generatedClaims = [MUSEUM_MEMBERSHIP];
 export const SERVICES = {
   CITY_ID,
   PHARMACY,
-  TRANSPORT
+  TRANSPORT,
+  DIPLOMA
 };
 
 // Create route config for services

@@ -42,7 +42,7 @@ export default {
   cityIdStep4: "Recibir ID de la ciudad",
 
   "The University of Lyon": "La Universidad de Lyon",
-  diplomaDisplayName: "Diploma",
+  diplomaDisplayName: "Diploma))))))))))",
   diplomaDescription:
     "Obtenga una copia digital verificada de su diploma. Compártalo fácilmente en su próxima entrevista de trabajo o cuando solicite un programa de posgrado.",
   diplomaStep1: "Iniciar sesión con uPort",
@@ -105,8 +105,8 @@ export default {
 
   CityID: "City ID",
   "City ID": "City ID",
-  Diploma: "Diploma",
-  "Monthly Bus Ticket": "Boleto de Bus Mensual",
+  Diploma: "Diploma(((((((((((",
+  "Unemployment Card": "Boleto de Bus Mensual",
   "Proof of Residency": "Medicamento Recetado",
   "Annual Membership": "Membresía Anual",
   "Insurance Coverage": "Cobertura del Seguro",

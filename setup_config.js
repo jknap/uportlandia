@@ -42,5 +42,14 @@ module.exports.ISSUER_PROFILES = [
       prod: "https://uportlandia.uport.me/transport"
     },
     profileImage: "src/images/pole_emploi.png"
+  },
+  {
+    id: "DIPLOMA",
+    name: "Pole Emploi",
+    url: {
+      stage: "https://uportlandia.uport.space/university",
+      prod: "https://uportlandia.uport.me/university"
+    },
+    profileImage: "src/images/sncf.png"
   }
 ];

@@ -42,9 +42,9 @@ export default {
   cityIdStep4: "Receive City ID",
 
   "The University City of Lyon": "The University City of Lyon",
-  diplomaDisplayName: "Diploma",
+  diplomaDisplayName: "SNCF Unemployment Discount Card",
   diplomaDescription:
-    "Get a verified digital copy of your diploma. Share it easily at you next job interview or while applying to post graduate program.",
+    "You are Unemployed? Get an SNCF discount card to travel with reduced fares.",
   diplomaStep1: "Login with uPort",
   diplomaStep2: "Get verified",
   diplomaStep3: "Receive Diploma",
@@ -79,7 +79,7 @@ export default {
     "Are you unemployed? Get your transport card and enjoy the city transportation with reduced fares!",
   transportStep1: "Login with uPort",
   transportStep2: "Get verified",
-  transportStep3: "Receive Monthly Bus Ticket",
+  transportStep3: "Receive Unemployment Card",
 
   "uPortlandia Museum of Modern Art": "uPortlandia Museum of Modern Art",
   museumDisplayName: "Annual Membership",
@@ -105,8 +105,8 @@ export default {
 
   CityID: "City ID",
   "City ID": "City ID",
-  Diploma: "Diploma",
-  "Monthly Bus Ticket": "Monthly Bus Ticket",
+  Diploma: "Diploma++++++++++",
+  "Unemployment Card": "Unemployment Card",
   "Proof of Residency": "Proof of Residency",
   "Annual Membership": "Annual Membership",
   "Insurance Coverage": "Insurance Coverage",
