@@ -32,7 +32,7 @@ export default {
   // Footer
   "Powered by": "Powered by",
 
-  "The City of uPortlandia": "The City of uPortlandia",
+  "The City City of Lyon": "The City City of Lyon",
   cityIdDisplayName: "City ID",
   cityIdDescription:
     "Identify yourself with one click. Get a digital City ID. Enjoy quick, seamless, and often free access to many city services.",
@@ -41,7 +41,7 @@ export default {
   cityIdStep3: "Get verified",
   cityIdStep4: "Receive City ID",
 
-  "The University of uPortlandia": "The University of uPortlandia",
+  "The University City of Lyon": "The University City of Lyon",
   diplomaDisplayName: "Diploma",
   diplomaDescription:
     "Get a verified digital copy of your diploma. Share it easily at you next job interview or while applying to post graduate program.",
@@ -73,7 +73,7 @@ export default {
   pharmacyStep2: "Get verified",
   pharmacyStep3: "Receive Prescription Drug",
 
-  "uPortlandia City Transit": "LYON Youth Discount Card",
+  "uPortlandia City Transit": "12-17 Lyon transport card",
   transportDisplayName: "12-17 transport card",
   transportDescription:
     "Are you a Lyon citizen between 12 and 17? Get your youth transport card and enjoy the city transportation with reduced fares!",
@@ -247,7 +247,7 @@ export default {
 
   // Transport
   transportDetail1:
-    "The City of uPortlandia provides free services for its citizens. Get your monthly bus ticket for free.",
+    "The City City of Lyon provides free services for its citizens. Get your monthly bus ticket for free.",
 
   // Pharmacy
   pharmacyDetail1:
@@ -255,7 +255,7 @@ export default {
 
   // Museum
   museumDetail1:
-    "The City of uPortlandia provides free services for its citizens. Get your annual museum membership for free.",
+    "The City City of Lyon provides free services for its citizens. Get your annual museum membership for free.",
 
   // Insurance
   insuranceDetail1:

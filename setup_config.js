@@ -18,25 +18,25 @@ module.exports.config = {
 module.exports.ISSUER_PROFILES = [
   {
     id: "CITY_ID",
-    name: "The City of uPortlandia",
+    name: "City Of Lyon",
     url: {
       stage: "https://uportlandia.uport.space/city",
       prod: "https://uportlandia.uport.me/city"
     },
-    profileImage: "src/images/city-logo.png"
+    profileImage: "src/images/city_of_lyon.png"
   },
   {
     id: "PHARMACY",
-    name: "Your Health Medical Center",
+    name: "EDF",
     url: {
       stage: "https://uportlandia.uport.space/pharmacy",
       prod: "https://uportlandia.uport.me/pharmacy"
     },
-    profileImage: "src/images/pharmacy-logo.png"
+    profileImage: "src/images/edf.png"
   },
   {
     id: "TRANSPORT",
-    name: "uPortlandia City Transit",
+    name: "12-17 Lyon transport card",
     url: {
       stage: "https://uportlandia.uport.space/transport",
       prod: "https://uportlandia.uport.me/transport"

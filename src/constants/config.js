@@ -114,13 +114,13 @@ export const registration = {
 const CITY_ID = {
   // This should match the Registration Config
   id: "CITY_ID",
-  name: "Illico Solidaire",
+  name: "City of Lyon",
   displayName: "cityIdDisplayName",
   icon: CityIDIcon,
   entity: "City of Lyon",
   description: "cityIdDescription",
   url: "/city",
-  claim: "Uportlandia City ID",
+  claim: "Lyon City ID",
   steps: ["cityIdStep1", "cityIdStep2", "cityIdStep3", "cityIdStep4"]
 };
 

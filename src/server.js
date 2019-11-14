@@ -9,19 +9,19 @@ app.use(bodyParser.json());
 
 const ISSUERS = {
   TRANSPORT: {
-    did: "did:ethr:0x5ce317c4928d6c7ccb60f26400e686fd2a5d83ed",
-    key: "b5713c84895b1c941d5ef172518cdca9366fb219a982f0721751eaab20beb6cb",
-    vc: ["/ipfs/QmaPvppSXzmQnMrrzkK6MUtGJYW5URchfupFphumFyLxZj"]
+    did: "did:ethr:0x114152f0b19fc75da23c54378b290a8b01709b27",
+    key: "0db09b194bdbf17b039e3c660d2c93498b400ba38d3c56bbdbd5eca6784f93cc",
+    vc: ["/ipfs/QmWmvuozBYfDDYwoTFEMfpgZ7cLSjGab9FQGAV1mtEgo4T"]
   },
   PHARMACY: {
-    did: "did:ethr:0xd9a6a24d4fc0f287bb331a162d319829456d0701",
-    key: "49a7a671ebbd1acf9e2a2359366713fe8aa8836d32d3aec6320387c6b79596d4",
-    vc: ["/ipfs/QmZK2PFzrRTuSn8EPm5fYCo25xpSRo5Vx6KpAAoPcdevTz"]
+    did: "did:ethr:0x826bdfe92abf84d9a671c3dd34dd6d9776e188e2",
+    key: "e63187304de2998019d36f07c0dd8fba29027db170bfc7a16ae846bc331a9f70",
+    vc: ["/ipfs/QmeprRX8WtGLDd8ZnLhqNta4odUrpQtyPjR7Q9vzeoyFaJ"]
   },
   CITY_ID: {
-    did: "did:ethr:0xc51bf4036b4a8b93a7ed386f79a94ad67ff0b402",
-    key: "e4caf59682bf7ad4e7182c31fcdc83a2b40767aca7fd1d09f4f1d35b081ed727",
-    vc: ["/ipfs/QmYFukJN5kVAMWNxrtBMgSMvEpFN6YG8CfCWHeFgtKGhsM"]
+    did: "did:ethr:0xed2fd324359f68fad22e3d3cca183832d473cdb6",
+    key: "3885b104badcb324259ed26aee3f8504faca0068d9e253c2114a014e1553d679",
+    vc: ["/ipfs/QmfDhMgsN2UX9hCgsKwxjaGTHtDXCtr4jvvx9SWfL4mPa1"]
   }
 };
 
