@@ -136,7 +136,7 @@ const PHARMACY = {
   steps: [],
   details: [],
   claimData: {
-    "Proof of Residency": "Yes"
+    "Proof of Residency": "Certified Address"
   }
 };
 
@@ -152,7 +152,7 @@ const TRANSPORT = {
   steps: ["transportStep1", "transportStep2", "transportStep3"],
   details: [],
   claimData: {
-    "Unemployment Card": "June 2019"
+    "Delivered on": "October 2019"
   }
 };
 
@@ -169,10 +169,10 @@ const DIPLOMA = {
   steps: ["diplomaStep1", "diplomaStep2", "diplomaStep3"],
   details: [],
   claimData: {
-    "School Name": "SNCF",
-    "Program Name": "French linguistics",
-    "Graduation Year": "2019",
-    "Final Grades": "B+"
+    "Issuer": "SNCF",
+    "Region": "Midi Pyrénées",
+    "Access to": "TER, TGV",
+    "Status": "Active"
   }
 };
 
