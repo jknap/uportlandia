@@ -76,7 +76,7 @@ export default {
   "uPortlandia City Transit": "Pole Emploi",
   transportDisplayName: "Unemployment card",
   transportDescription:
-    "Are you unemployed? Get your transport card and enjoy the city transportation with reduced fares!",
+    "Receive your certificate of unemployment from Pole Emploi",
   transportStep1: "Login with uPort",
   transportStep2: "Get verified",
   transportStep3: "Receive Unemployment Card",

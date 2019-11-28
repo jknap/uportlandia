@@ -12,7 +12,7 @@ module.exports.config = {
     stage: "uportlandia.uport.space",
     prod: "uportlandia.uport.me"
   },
-  cors: true
+  cors: false
 };
 
 module.exports.ISSUER_PROFILES = [

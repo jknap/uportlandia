@@ -1,32 +1,34 @@
-const handler = require("serverless-express/handler");
-const express = require("serverless-express/express");
+const express = require("express");
 const bodyParser = require("body-parser");
 const Credentials = require("uport-credentials").Credentials;
 const verifyJWT = require("did-jwt").verifyJWT;
+const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
+app.options('*', cors());
 
 const ISSUERS = {
   DIPLOMA: {
-    did: "did:ethr:0x6164a98cd2aac8392167bc4dab95389331333f46",
-    key: "700f80db98504ec16930cd71f12a5335f655a90150aa36c6f396a9cc96361794",
-    vc: ["/ipfs/QmbZ8y3AyqMFKr1FwsVHgcYgwaaYT5NdPuKaTaouuzD5oY"]
+    did: 'did:ethr:0x6de61bccb8555e8e7dea7bcb056e8b1ecaa03bbb',
+    key: '5613d1284e91f22e42b32d47659e832ef1e86219da37a72f579e4411a1476006',
+    vc: [ '/ipfs/QmTrZF5ocGuy7aUt7o914dW6DMfMPCnvsuRt3zujFZbyJY' ]
   },
   TRANSPORT: {
-    did: "did:ethr:0xe889925152b4474bf5be65be54ce27ce0ee203fc",
-    key: "9041db432d35d144f6f7f98852ed312547e3949dbe746ed6fe23b25528613d46",
-    vc: ["/ipfs/QmfRenGHcVhLJkPhBx1pnZHeceXr5zpW3mPL9dFzcaH1Bf"]
+    did: 'did:ethr:0x1acc4bfcdf040f6ae713f7782123a15bef89148b',
+    key: '701376f918fea6327fc9e30d33556cab762b888a6e4fccf5ef92b26ad6785d92',
+    vc: [ '/ipfs/QmajDpos9UDN7R8yChjrhrpjzn4KP5PT1HesLFwdypBm3Q' ]
   },
   PHARMACY: {
-    did: "did:ethr:0x0b0776245972ddc7b5bf355517187ec227f3a510",
-    key: "5387ec1110a359f834b1d9e944d57a5ee5736cc05e5d3290b251a8124ebf9a24",
-    vc: ["/ipfs/QmU2MWvipHmYoaV83Hs62JcSsKfMHmLcapU1GeTgutsNKc"]
+    did: 'did:ethr:0x358bc5a8e741b44ce425613bffde503488aef16b',
+    key: 'af1e6cac2b372ccaa1ccc8794444473eeb800d9b06273caaed2038220fd5b0ae',
+    vc: [ '/ipfs/QmTtcbDKLUygXjPvQEWCRHomEfLghBbVAFg9cpB1YZxWhw' ]
   },
   CITY_ID: {
-    did: "did:ethr:0xbcfa079c2f506a99a23c0d97f7addba750a7c2df",
-    key: "be9faf03f6a06f6f3dd425e1ed88eb2ecaf8209ab8a122e329fec1d3df8f829d",
-    vc: ["/ipfs/QmezwmbxRtcgKzdsEP1wsqR4BUuTzR22Xo4r7LJrx2GAiv"]
+    did: 'did:ethr:0x711ffad870721f51db6e8bfa0dab6c3280ac2357',
+    key: '8faad90821688f0efdcc57f084799001d336359ab3e441207ec3dae72e16a531',
+    vc: [ '/ipfs/QmWSoDn8t9FL8LiJD5Nzua4p9fjfx4ZSmmNwAMpLjGujSX' ]
   }
 };
 
@@ -87,4 +89,4 @@ app.post("/api/verify_credentials", async (req, res) => {
   res.json({ profile });
 });
 
-module.exports.handler = handler(app);
+app.listen(3001, () => console.log(`Example app listening on port 3001!`))

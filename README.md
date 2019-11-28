@@ -2,18 +2,11 @@
 
 **Generate Hard-Coded credential IDs**
 ```
-yarn setup-local
+yarn setup:local
 ```
 Paste those IDs in src/server.js
 
-**Back End**
+**Setup service**
 ```
-yarn local:api
+docker-compose up
 ```
-
-**Front End**
-In a separate terminal window, run
-```
-yarn start
-```
-Open http://localhost:3000/
