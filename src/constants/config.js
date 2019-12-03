@@ -279,15 +279,15 @@ const ADDRESS = {
 };
 
 const SCHOOL_NAME = {
-  name: "School Name",
-  displayName: "School Name",
+  name: "Issuer",
+  displayName: "Issuer",
   issuedBy: [DIPLOMA],
   honoredBy: [COMPANY]
 };
 
 const PROGRAM_NAME = {
-  name: "Program Name",
-  displayName: "Program Name",
+  name: "Region",
+  displayName: "Region",
   type: "required",
   issuedBy: [DIPLOMA],
   honoredBy: [COMPANY]
@@ -301,8 +301,8 @@ const FINAL_GRADES = {
 };
 
 const GRADUATION_YEAR = {
-  name: "Graduation Year",
-  displayName: "Graduation Year",
+  name: "Access to",
+  displayName: "Status",
   issuedBy: [DIPLOMA],
   honoredBy: [INSURANCE, COMPANY]
 };
